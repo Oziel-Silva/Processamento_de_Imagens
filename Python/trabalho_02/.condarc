@@ -1,0 +1,4 @@
+channels:
+  - menpo
+  - defaults
+ssl_verify: true
