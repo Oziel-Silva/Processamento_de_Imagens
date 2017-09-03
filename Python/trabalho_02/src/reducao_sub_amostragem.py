@@ -1,12 +1,21 @@
+    # -*- coding: utf-8 -*-
+
+##################################################################################
+## Company: 
+## Engineer: Oziel da Silva
+## 
+## Create Date: 02-09-2017 14:26 AM
+## Module Name:redução por sub amostragem 
+## Description: redução de imagem usando o método da sub amostragem
+## Additional Comments:
+## 
+##################################################################################
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
 lena_512 = cv2.imread("../img/lena_gray_512.tif")
 woman_512 = cv2.imread("../img/woman_blonde.tif")
-
-print (lena_512.shape)
-print (woman_512.shape)
 
 reducao1 = 1/2
 reducao2 = 1/4
@@ -59,10 +68,13 @@ cv2.imwrite('../img/lena_32.tif', lena_32)
 cv2.imwrite('../img/woman_32.tif', woman_32)
 
 
-print(lena_256.shape)
-
-#plt.subplot(211)
-#plt.imshow(lena_512)
-#plt.subplot(212)
-#plt.imshow(lena_256, cmap = "gray")
-#plt.show()
+print (lena_512.shape)
+print (woman_512.shape)
+print (lena_256.shape)
+print (woman_256.shape)
+print (lena_128.shape)
+print (woman_128.shape)
+print (lena_64.shape)
+print (woman_64.shape)
+print (lena_32.shape)
+print (woman_32.shape)
