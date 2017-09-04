@@ -12,6 +12,7 @@
 ##################################################################################
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
 
 lena_32 = cv2.imread("../img/lena_32.tif")
 lena_64 = cv2.imread("../img/lena_64.tif")
@@ -58,4 +59,13 @@ cv2.imwrite('../img/interp_VIZINHO_64_512_lena.tif', interp_lena_64_512)
 cv2.imwrite('../img/interp_VIZINHO_128_512_lena.tif', interp_lena_128_512)
 cv2.imwrite('../img/interp_VIZINHO_256_512_lena.tif', interp_lena_256_512)
 
+plt.subplot(221)
+plt.imshow(interp_lena_32_512,cmap = "gray")
+plt.subplot(222)
+plt.imshow(interp_lena_64_512, cmap = "gray")
+plt.subplot(223)
+plt.imshow(interp_lena_128_512, cmap = "gray")
+plt.subplot(224)
+plt.imshow(interp_lena_256_512, cmap = "gray")
+plt.show()
 
